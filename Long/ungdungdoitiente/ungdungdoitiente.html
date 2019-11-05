@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ungdungdoitiente</title>
+    <script src="ungdungdoitiente.js"></script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th >Amount</th>
+            <th > From Currency</th>
+            <th > To Currency</th>
+        </tr>
+        <tr>
+            <td> <input type="text" id="amount"></td>
+            <td> <select id="from">
+                <option value="fromVND">VND</option>
+                <option value="fromUSD">USD</option>
+            </select></td>
+            <td>
+                <select id="to">
+                    <option value="toUSD">USD</option>
+                    <option value="toVND">VND</option>
+                </select>
+            </td>
+            <td> <input type="button" name="convert" value="Convert" onclick="f()"></td>
+        </tr>
+    </table>
+</form>
+<div id="result" ></div>
+</body>
+</html>
