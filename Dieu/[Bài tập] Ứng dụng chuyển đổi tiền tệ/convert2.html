@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiều loại tiền tệ</title>
+    <script src="convert2.js"></script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="amount" id="amount" ></td>
+                <td>
+                    <select id="from">
+                        <option value="1">USD</option>
+                        <option value="23000">VNĐ</option>
+                        <option value="109">YEN</option>
+                        <option value="0.9">EUR</option>
+                        <option value="0.78">GBP</option>
+                        <option value="63.25">RUB</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="to">
+                        <option value="1">USD</option>
+                        <option value="23000">VNĐ</option>
+                        <option value="109">YEN</option>
+                        <option value="0.9">EUR</option>
+                        <option value="0.78">GBP</option>
+                        <option value="63.25">RUB</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="convert2()">Convert</button> </td>
+            </tr>
+        </table>
+    </form>
+    <span id="result"></span>
+
+</body>
+</html>

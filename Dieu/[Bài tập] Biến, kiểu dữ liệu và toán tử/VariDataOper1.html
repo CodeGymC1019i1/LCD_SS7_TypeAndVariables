@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tâp nhập điểm sinh viên</title>
+</head>
+<body>
+    <script>
+        let inputMath, inputChem, inputBiol;
+        inputMath = prompt("Nhập điểm toán = ");
+        inputChem = prompt("Nhập điểm hóa = ");
+        inputBiol = prompt("Nhập điểm sinh học = ");
+        let iMath = parseInt(inputMath);
+        let iChem = parseInt(inputChem);
+        let iBiol = parseInt(inputBiol);
+        let t = iMath + iChem + iBiol;
+        let tb = t/3;
+        alert("Sinh viên có tổng điểm là " +t);
+        alert(" trung bình = " +tb);
+    </script>
+
+</body>
+</html>
