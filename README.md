@@ -1,0 +1,1 @@
+# LCD_SS7_TypeAndVariables
