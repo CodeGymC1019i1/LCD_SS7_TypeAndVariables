@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+<!--Hiển thị bằng popup-->
+<button type="button" onclick="showMessage1();">Click me!</button>
+<script>
+    function showMessage1() {
+        alert('Hello world');
+    }
+</script>
+<!--Hiển thị inner HTML-->
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage2();"> Click vào tôi! </button>
+<script>
+    function showMessage2() {
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!'
+    }
+</script>
+
+<!--Hiển thị document write-->
+<button type="button" onclick="showMessage3();">Click vào button này</button>
+<script>
+    function showMessage3() {
+        document.write('Bonjour!!!!');
+    }
+</script>
+
+<!--Hiển thị kết quả sử dụng hàm console.log-->
+
+<button type="button" onclick="showMessage4();">Click Me!</button>
+<script>
+    function showMessage4(){
+        console.log('Xin chào!');
+    }
+    let a = prompt('Input number a:');
+    let b1 = prompt('Input number b1:');
+    if (b1%a == 0) {
+        alert(b1 + " is multiple number of " + a);
+    }
+    else {
+        alert(b1 + " is not multiple number of " + a);
+    }
+</script>
+
+</body>
+</html>

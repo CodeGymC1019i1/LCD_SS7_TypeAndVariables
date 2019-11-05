@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi, diện tích hình tròn</title>
+</head>
+<body>
+<div  style="width: 250px; height: 400px; border: 1px solid darkgray; float: left;" id="hinhtron">
+    Nhập vào bán kính của hình tròn <input type="number" id="bk"><br>
+    <button onclick="dientich();">Diện tích</button>
+    <br>
+    <input type="text" id="dientich"><br>
+    <button onclick="chuvi();">Chu vi</button>
+    <br>
+    <input type="text" id="chuvi">
+</div>
+<div style="width: 250px; height: 400px; border: 1px solid darkkhaki; float: left;"  id="nhietdo">
+    Nhập vào nhiệt độ C <input type="number" id="doC"> <br>
+    <button onclick="ctof();">Nhiệt độ F</button>
+    <br>
+    <input type="text" id="nhietdof"><br>
+</div>
+
+<script type="text/javascript">
+    /*tính diện tích hình tròn*/
+    function dientich() {
+        var r = document.getElementById('bk').value;
+        var r1 = parseFloat(r);
+        document.getElementById('dientich').value = r1*r1*3.14;
+    }
+    /*tính chu vi hình tròn*/
+    function chuvi() {
+        var r = document.getElementById('bk').value;
+        var r1 = parseFloat(r);
+        document.getElementById('chuvi').value = 2*3.14*r1;
+    }
+    /*chuyển nhiệt độ C sang F*/
+    function ctof() {
+        var doC = document.getElementById('doC').value;
+        document.getElementById('nhietdof').value = doC*9/5+32;
+    }
+</script>
+</body>
+</html>

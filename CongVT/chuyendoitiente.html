@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <div style="width: 30%; height:100px; background-color: darkgray; padding: 0.3cm; border-radius: 10px; display: block;" >
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><input type="number" min="0" id="num"></td>
+                <td>
+                    <select id="fromC">
+                        <option value="23000">VND</option>
+                        <option value="108">JPY</option>
+                        <option value="1">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="toC">
+                        <option value="1">USD</option>
+                        <option value="108">JPY</option>
+                        <option value="23000">VND</option>
+                    </select>
+                    <button type="button" onclick="exchange();">Convert</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td>
+
+            </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+<p id="result">ket qua...</p>
+<script>
+    function exchange() {
+        let amount = document.getElementById('num').value;
+        let to = document.getElementById('toC').value;
+        let fromc = document.getElementById('fromC').value;
+
+        let resultt;
+        resultt = amount*to/fromc;
+
+        let resulttDemo = document.getElementById('result');
+        resulttDemo.innerHTML = resultt;
+    }
+</script>
+</body>
+</html>
