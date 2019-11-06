@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>di chuyển bóng</title>
+</head>
+<body>
+<img id="ball" src="../ball.jpeg" alt="">
+<p>bấm nút dưới đây để dịch chuyển quả bóng</p><br>
+<input type="button" onclick="moveRight();" value="Click">
+
+<script>
+    let imgOjb = null;
+
+    function init() { //khởi tạo object bóng
+        let imgOjb = document.getElementById('ball');
+        imgOjb.style.position = 'relative';
+        imgOjb.style.left = '0px';
+    }
+    function moveRight() {
+        let imgOjb = document.getElementById('ball');
+        imgOjb.style.left = parseInt(imgOjb.style.left) + 50+'px';
+    }
+    window.onload = init();
+
+</script>
+</body>
+</html>
