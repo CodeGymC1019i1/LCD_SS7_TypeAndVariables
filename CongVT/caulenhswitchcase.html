@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ngày của tháng</title>
+</head>
+<body>
+<form action="">
+    <div style="width: 200px; height: 100px; border: 1px solid black; background: darkkhaki">
+        Tháng <input id="month" type="number" min="1" max="12" style="width: 50%;
+  /*padding: 12px 20px;*/
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;">
+       <button type="button" onclick="dayinmonth();">Tính số ngày</button>
+        <br>
+        <p id="daycount"></p>
+    </div>
+</form>
+<script>
+    function dayinmonth(){
+        let month =parseInt(document.getElementById('month').value);
+        let days;
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+
+                days = '31';
+                break;
+            case 2:
+                days = "28 hoặc 29";
+                break;
+            case 4,6,9,11:
+                days = '30';
+                break;
+        }
+        document.getElementById('daycount').innerText = days;
+
+    }
+
+</script>
+</body>
+</html>
